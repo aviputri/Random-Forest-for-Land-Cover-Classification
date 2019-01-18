@@ -108,6 +108,29 @@ def combine_bands(b1, b2, b3, b4, b5, b7, ndvi, multiband_array_file):
 
 	return(multiband_array)
 
+#combine the bands with SF
+def combine_bands_sf(b1, b2, b3, b4, b5, b7, ndvi, ndwi, mndwi1, mndwi2, ndbi, mndbi, 
+	multiband_array_file):
+
+	b1 = b1.ravel()
+	b2 = b2.ravel()
+	b3 = b3.ravel()
+	b4 = b4.ravel()
+	b5 = b5.ravel()
+	b7 = b7.ravel()
+	ndvi = ndvi.ravel()
+	ndwi = ndwi.ravel()
+	mndwi1 = mndwi1.ravel()
+	mndwi2 = mndwi2.ravel()
+	ndbi = ndbi.ravel()
+	mndbi = mndbi.ravel()
+	comb = np.array([b1, b2, b3, b4, b5, b7, ndvi, ndwi, mndwi1, mndwi2, ndbi, mndbi])
+	multiband_array = comb.transpose()
+
+	np.save(multiband_array_file, multiband_array)
+
+	return(multiband_array)
+
 #import the image band to be predicted (one by one)
 def create_band(band):
 
