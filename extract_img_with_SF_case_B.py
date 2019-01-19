@@ -65,7 +65,7 @@ test11 = functions.read_class(tabular_data=file_test11_dbf,
 	gt_array_file='Samples/SLC off/B_test11.npy')
 
 #-----------------------------------------------------------------------------------------------
-#read raster values and combine them into train_array (training datasets)
+##read raster values and combine them into train_array (training datasets)
 
 #2009
 b1_09_ar = functions.extract_values(shp = file_train09_shp, raster = b1_09)
@@ -79,11 +79,11 @@ ndwi_09_ar = functions.extract_values(shp = file_train09_shp, raster = ndwi_09)
 mndwi1_09_ar = functions.extract_values(shp = file_train09_shp, raster = mndwi1_09)
 mndwi2_09_ar = functions.extract_values(shp = file_train09_shp, raster = mndwi2_09)
 ndbi_09_ar = functions.extract_values(shp = file_train09_shp, raster = ndbi_09)
-mndwi_09_ar = functions.extract_values(shp = file_train09_shp, raster = mndwi_09)
+mndbi_09_ar = functions.extract_values(shp = file_train09_shp, raster = mndbi_09)
 
 train_array_09 = functions.combine_bands_sf(b1 = b1_09_ar, b2 = b2_09_ar, b3 = b3_09_ar, b4 = b4_09_ar, 
-	b5 = b5_09_ar, b7 = b7_09_ar, ndvi = ndvi_09_ar, ndwi = ndwi_09, mndwi1 = mndwi1_09, 
-	mndwi2 = mndwi2_09, ndbi = ndbi_09, mndbi = mndbi_09,
+	b5 = b5_09_ar, b7 = b7_09_ar, ndvi = ndvi_09_ar, ndwi = ndwi_09_ar, mndwi1 = mndwi1_09_ar, 
+	mndwi2 = mndwi2_09_ar, ndbi = ndbi_09_ar, mndbi = mndbi_09_ar,
 	multiband_array_file = 'Samples/SLC off/B_train_array_sf_09.npy')
 
 
@@ -99,11 +99,11 @@ ndwi_11_ar = functions.extract_values(shp = file_train11_shp, raster = ndwi_11)
 mndwi1_11_ar = functions.extract_values(shp = file_train11_shp, raster = mndwi1_11)
 mndwi2_11_ar = functions.extract_values(shp = file_train11_shp, raster = mndwi2_11)
 ndbi_11_ar = functions.extract_values(shp = file_train11_shp, raster = ndbi_11)
-mndwi_11_ar = functions.extract_values(shp = file_train11_shp, raster = mndwi_11)
+mndbi_11_ar = functions.extract_values(shp = file_train11_shp, raster = mndbi_11)
 
 train_array_11 = functions.combine_bands_sf(b1 = b1_11_ar, b2 = b2_11_ar, b3 = b3_11_ar, b4 = b4_11_ar, 
-	b5 = b5_11_ar, b7 = b7_11_ar, ndvi = ndvi_11_ar, ndwi = ndwi_11, mndwi1 = mndwi1_11, 
-	mndwi2 = mndwi2_11, ndbi = ndbi_11, mndbi = mndbi_11,
+	b5 = b5_11_ar, b7 = b7_11_ar, ndvi = ndvi_11_ar, ndwi = ndwi_11_ar, mndwi1 = mndwi1_11_ar, 
+	mndwi2 = mndwi2_11_ar, ndbi = ndbi_11_ar, mndbi = mndbi_11_ar,
 	multiband_array_file = 'Samples/SLC off/B_train_array_sf_11.npy')
 
 
