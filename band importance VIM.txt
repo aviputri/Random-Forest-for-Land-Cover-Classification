@@ -1,0 +1,406 @@
+Case A
+2009
+100 trees
+Band 1 importance: 0.0813815463749
+Band 2 importance: 0.0795623745443
+Band 3 importance: 0.104029387681
+Band 4 importance: 0.0967627154497
+Band 5 importance: 0.0878575348014
+Band 7 importance: 0.0990181730955
+Band NDVI importance: 0.0640970092749
+Band NDWI importance: 0.0510103225197
+Band MNDWI1 importance: 0.10275237272
+Band MNDWI2 importance: 0.0946379662141
+Band NDBI importance: 0.0684424538917
+Band MNDBI importance: 0.0704481434325
+200 trees
+Band 1 importance: 0.0823947987241
+Band 2 importance: 0.0805329922511
+Band 3 importance: 0.106602863004
+Band 4 importance: 0.100484348961
+Band 5 importance: 0.0870004462215
+Band 7 importance: 0.098582967781
+Band NDVI importance: 0.0636150573041
+Band NDWI importance: 0.0518886726906
+Band MNDWI1 importance: 0.103184364352
+Band MNDWI2 importance: 0.0938725212392
+Band NDBI importance: 0.0667342492359
+Band MNDBI importance: 0.0651067182356
+300 trees
+Band 1 importance: 0.0822904778669
+Band 2 importance: 0.0810833923156
+Band 3 importance: 0.105604672567
+Band 4 importance: 0.100091525843
+Band 5 importance: 0.0868508661966
+Band 7 importance: 0.0986184570853
+Band NDVI importance: 0.0630250973012
+Band NDWI importance: 0.0515873239865
+Band MNDWI1 importance: 0.103304328091
+Band MNDWI2 importance: 0.0939598497831
+Band NDBI importance: 0.0672344531331
+Band MNDBI importance: 0.0663495558303
+400 trees
+Band 1 importance: 0.0822662161324
+Band 2 importance: 0.0805305848488
+Band 3 importance: 0.105313994481
+Band 4 importance: 0.0994214187212
+Band 5 importance: 0.0865142558611
+Band 7 importance: 0.0982260167762
+Band NDVI importance: 0.062801303839
+Band NDWI importance: 0.0511736211326
+Band MNDWI1 importance: 0.103706665798
+Band MNDWI2 importance: 0.0944272560947
+Band NDBI importance: 0.0674858442922
+Band MNDBI importance: 0.0681328220227
+500 trees
+Band 1 importance: 0.0820229889274
+Band 2 importance: 0.0803251698998
+Band 3 importance: 0.105870824612
+Band 4 importance: 0.0992920768483
+Band 5 importance: 0.0863859604826
+Band 7 importance: 0.0978691398375
+Band NDVI importance: 0.0635160875671
+Band NDWI importance: 0.0510136294617
+Band MNDWI1 importance: 0.10388215086
+Band MNDWI2 importance: 0.0949833525493
+Band NDBI importance: 0.0674380524672
+Band MNDBI importance: 0.0674005664869
+
+2011
+100 trees
+Band 1 importance: 0.0898630498173
+Band 2 importance: 0.0888959801565
+Band 3 importance: 0.0796318177396
+Band 4 importance: 0.109277709078
+Band 5 importance: 0.0843340760325
+Band 7 importance: 0.0780341977228
+Band NDVI importance: 0.0994626635939
+Band NDWI importance: 0.0665945877016
+Band MNDWI1 importance: 0.0716832582964
+Band MNDWI2 importance: 0.0914782313489
+Band NDBI importance: 0.0769108955577
+Band MNDBI importance: 0.0638335329549
+200 trees
+Band 1 importance: 0.0899155207811
+Band 2 importance: 0.0876099409845
+Band 3 importance: 0.0763274772814
+Band 4 importance: 0.109900833975
+Band 5 importance: 0.0840416272638
+Band 7 importance: 0.0788373879528
+Band NDVI importance: 0.0993572267795
+Band NDWI importance: 0.066358007173
+Band MNDWI1 importance: 0.0720934530964
+Band MNDWI2 importance: 0.0909179754347
+Band NDBI importance: 0.0777944854339
+Band MNDBI importance: 0.0668460638438
+300 trees
+Band 1 importance: 0.0903140785024
+Band 2 importance: 0.0891397612253
+Band 3 importance: 0.0761996010476
+Band 4 importance: 0.108065733978
+Band 5 importance: 0.0834335527094
+Band 7 importance: 0.0789224093297
+Band NDVI importance: 0.101578464212
+Band NDWI importance: 0.0666276982777
+Band MNDWI1 importance: 0.0724228561581
+Band MNDWI2 importance: 0.0893054343845
+Band NDBI importance: 0.0778760908493
+Band MNDBI importance: 0.0661143193261
+400 trees
+Band 1 importance: 0.089744956579
+Band 2 importance: 0.0886725921357
+Band 3 importance: 0.0761821239545
+Band 4 importance: 0.109177019905
+Band 5 importance: 0.084220987848
+Band 7 importance: 0.0787255240431
+Band NDVI importance: 0.099869339249
+Band NDWI importance: 0.0675547595581
+Band MNDWI1 importance: 0.0723424708902
+Band MNDWI2 importance: 0.0899065746007
+Band NDBI importance: 0.0780341738455
+Band MNDBI importance: 0.0655694773912
+500 trees
+Band 1 importance: 0.0907663641114
+Band 2 importance: 0.0881770376847
+Band 3 importance: 0.0776731110727
+Band 4 importance: 0.108736407479
+Band 5 importance: 0.0839441142989
+Band 7 importance: 0.0777270670386
+Band NDVI importance: 0.0986284554017
+Band NDWI importance: 0.0679399372402
+Band MNDWI1 importance: 0.0720780257392
+Band MNDWI2 importance: 0.0905231697451
+Band NDBI importance: 0.0778742179734
+Band MNDBI importance: 0.0659320922154
+
+--------------------------------------
+Case B
+2009
+100 trees
+Band 1 importance: 0.0839992774292
+Band 2 importance: 0.0898333110126
+Band 3 importance: 0.0943620528259
+Band 4 importance: 0.0808751551397
+Band 5 importance: 0.093714676738
+Band 7 importance: 0.103120589799
+Band NDVI importance: 0.0735288958331
+Band NDWI importance: 0.0477663970386
+Band MNDWI1 importance: 0.095782720584
+Band MNDWI2 importance: 0.0961338055281
+Band NDBI importance: 0.0632822890356
+Band MNDBI importance: 0.0776008290359
+200 trees
+Band 1 importance: 0.0839314053244
+Band 2 importance: 0.0894257359834
+Band 3 importance: 0.0924625613269
+Band 4 importance: 0.083810243968
+Band 5 importance: 0.0938980333101
+Band 7 importance: 0.103160989305
+Band NDVI importance: 0.0743314649596
+Band NDWI importance: 0.0471983177826
+Band MNDWI1 importance: 0.0971183792742
+Band MNDWI2 importance: 0.0943610772195
+Band NDBI importance: 0.063822520855
+Band MNDBI importance: 0.0764792706917
+300 trees
+Band 1 importance: 0.0836341645613
+Band 2 importance: 0.0899586501841
+Band 3 importance: 0.0920592788375
+Band 4 importance: 0.082497530268
+Band 5 importance: 0.0937226337116
+Band 7 importance: 0.10332609204
+Band NDVI importance: 0.0744035449174
+Band NDWI importance: 0.0480799070894
+Band MNDWI1 importance: 0.0955277896585
+Band MNDWI2 importance: 0.0948883832976
+Band NDBI importance: 0.0638792435383
+Band MNDBI importance: 0.0780227818965
+400 trees
+Band 1 importance: 0.0839784401467
+Band 2 importance: 0.0897358214595
+Band 3 importance: 0.0925109200267
+Band 4 importance: 0.0823871620751
+Band 5 importance: 0.0929676988829
+Band 7 importance: 0.103568703564
+Band NDVI importance: 0.0741058000366
+Band NDWI importance: 0.0478848782475
+Band MNDWI1 importance: 0.0956665973239
+Band MNDWI2 importance: 0.0947064854654
+Band NDBI importance: 0.0644434646017
+Band MNDBI importance: 0.07804402817
+500 trees
+Band 1 importance: 0.0838334604804
+Band 2 importance: 0.0897336870691
+Band 3 importance: 0.0916372373842
+Band 4 importance: 0.0824159588014
+Band 5 importance: 0.0936004530202
+Band 7 importance: 0.103949693724
+Band NDVI importance: 0.0743468668862
+Band NDWI importance: 0.0481434742948
+Band MNDWI1 importance: 0.0949021919871
+Band MNDWI2 importance: 0.0947233818064
+Band NDBI importance: 0.0640055530609
+Band MNDBI importance: 0.0787080414851
+
+2011
+100 trees
+Band 1 importance: 0.0906778227262
+Band 2 importance: 0.0914012483494
+Band 3 importance: 0.0832875981007
+Band 4 importance: 0.0886786030524
+Band 5 importance: 0.0855085001306
+Band 7 importance: 0.0824945306056
+Band NDVI importance: 0.112044436208
+Band NDWI importance: 0.0623907975664
+Band MNDWI1 importance: 0.0666846907535
+Band MNDWI2 importance: 0.0768341104956
+Band NDBI importance: 0.0851769159439
+Band MNDBI importance: 0.0748207460676
+200 trees
+Band 1 importance: 0.0912759226971
+Band 2 importance: 0.0922105328754
+Band 3 importance: 0.0828778748509
+Band 4 importance: 0.0881181870911
+Band 5 importance: 0.0849464191467
+Band 7 importance: 0.083753698547
+Band NDVI importance: 0.111550996637
+Band NDWI importance: 0.0630798903855
+Band MNDWI1 importance: 0.0668198701828
+Band MNDWI2 importance: 0.0760284400975
+Band NDBI importance: 0.084487095795
+Band MNDBI importance: 0.0748510716943
+300 trees
+Band 1 importance: 0.0910133697455
+Band 2 importance: 0.091604263377
+Band 3 importance: 0.0828406775269
+Band 4 importance: 0.0883505197426
+Band 5 importance: 0.085528605298
+Band 7 importance: 0.0829414258154
+Band NDVI importance: 0.111700812005
+Band NDWI importance: 0.0629367983782
+Band MNDWI1 importance: 0.0672468576269
+Band MNDWI2 importance: 0.0768330695312
+Band NDBI importance: 0.0844195122544
+Band MNDBI importance: 0.074584088699
+400 trees
+Band 1 importance: 0.0917147784409
+Band 2 importance: 0.0916267807982
+Band 3 importance: 0.0826896866222
+Band 4 importance: 0.0881628308074
+Band 5 importance: 0.0855909403195
+Band 7 importance: 0.0828185131971
+Band NDVI importance: 0.112093631279
+Band NDWI importance: 0.0628304368169
+Band MNDWI1 importance: 0.0668152030587
+Band MNDWI2 importance: 0.0761587476229
+Band NDBI importance: 0.084425151199
+Band MNDBI importance: 0.0750732998379
+500 trees
+Band 1 importance: 0.0915558486011
+Band 2 importance: 0.0919372597625
+Band 3 importance: 0.0829817977753
+Band 4 importance: 0.0882887077685
+Band 5 importance: 0.0859151019672
+Band 7 importance: 0.084136360415
+Band NDVI importance: 0.11182867456
+Band NDWI importance: 0.0622752750112
+Band MNDWI1 importance: 0.0680195617009
+Band MNDWI2 importance: 0.0760937976393
+Band NDBI importance: 0.0837486038271
+Band MNDBI importance: 0.0732190109722
+
+--------------------------------------
+Case C
+2009
+100 trees
+Band 1 importance: 0.0854333442612
+Band 2 importance: 0.0894767891906
+Band 3 importance: 0.104044687943
+Band 4 importance: 0.0926529203365
+Band 5 importance: 0.0893596044345
+Band 7 importance: 0.098075840248
+Band NDVI importance: 0.0630967313982
+Band NDWI importance: 0.046863263583
+Band MNDWI1 importance: 0.10435759967
+Band MNDWI2 importance: 0.0879604102904
+Band NDBI importance: 0.0629946887292
+Band MNDBI importance: 0.0756841199153
+200 trees
+Band 1 importance: 0.0853023337841
+Band 2 importance: 0.0893103468882
+Band 3 importance: 0.102711323768
+Band 4 importance: 0.0922752932719
+Band 5 importance: 0.0899064385161
+Band 7 importance: 0.0990464832707
+Band NDVI importance: 0.0644322101085
+Band NDWI importance: 0.0471481107228
+Band MNDWI1 importance: 0.10409253893
+Band MNDWI2 importance: 0.0879236820868
+Band NDBI importance: 0.0627989316558
+Band MNDBI importance: 0.0750523069971
+300 trees
+Band 1 importance: 0.0855725488996
+Band 2 importance: 0.0892470340335
+Band 3 importance: 0.104124018241
+Band 4 importance: 0.0936690904738
+Band 5 importance: 0.0892052355498
+Band 7 importance: 0.0987816444926
+Band NDVI importance: 0.0633250591106
+Band NDWI importance: 0.0468892392029
+Band MNDWI1 importance: 0.104431229309
+Band MNDWI2 importance: 0.088046811593
+Band NDBI importance: 0.0631332599038
+Band MNDBI importance: 0.0735748291912
+400 trees
+Band 1 importance: 0.0854057595123
+Band 2 importance: 0.0895033001766
+Band 3 importance: 0.103343863347
+Band 4 importance: 0.0916728112164
+Band 5 importance: 0.0892088054277
+Band 7 importance: 0.0988463082028
+Band NDVI importance: 0.0641525990957
+Band NDWI importance: 0.0468661606723
+Band MNDWI1 importance: 0.103702371399
+Band MNDWI2 importance: 0.0884412555343
+Band NDBI importance: 0.0631001538572
+Band MNDBI importance: 0.075756611559
+500 trees
+Band 1 importance: 0.0851677421892
+Band 2 importance: 0.0888055414017
+Band 3 importance: 0.104490743522
+Band 4 importance: 0.096009852079
+Band 5 importance: 0.0892543673648
+Band 7 importance: 0.0985711463624
+Band NDVI importance: 0.0632983545428
+Band NDWI importance: 0.0465161482075
+Band MNDWI1 importance: 0.106104124997
+Band MNDWI2 importance: 0.0883724538737
+Band NDBI importance: 0.062626386158
+Band MNDBI importance: 0.0707831393021
+
+2011
+100 trees
+Band 1 importance: 0.0916575825965
+Band 2 importance: 0.0905367665788
+Band 3 importance: 0.0829766303188
+Band 4 importance: 0.0931292418312
+Band 5 importance: 0.0879895838714
+Band 7 importance: 0.0793414315985
+Band NDVI importance: 0.108744770105
+Band NDWI importance: 0.0610822899086
+Band MNDWI1 importance: 0.0672896594895
+Band MNDWI2 importance: 0.0821285954258
+Band NDBI importance: 0.0813995106494
+Band MNDBI importance: 0.0737239376263
+200 trees
+Band 1 importance: 0.0910598638048
+Band 2 importance: 0.090304003785
+Band 3 importance: 0.0838556893791
+Band 4 importance: 0.0926949539839
+Band 5 importance: 0.0876263852669
+Band 7 importance: 0.0796766303095
+Band NDVI importance: 0.109287465289
+Band NDWI importance: 0.0616274621254
+Band MNDWI1 importance: 0.0669433555138
+Band MNDWI2 importance: 0.0808993000769
+Band NDBI importance: 0.0810096438953
+Band MNDBI importance: 0.0750152465709
+300 trees
+Band 1 importance: 0.0912015892387
+Band 2 importance: 0.090896031589
+Band 3 importance: 0.0826984125354
+Band 4 importance: 0.0933756430456
+Band 5 importance: 0.0876343752763
+Band 7 importance: 0.0797893427634
+Band NDVI importance: 0.108414334141
+Band NDWI importance: 0.0618995346151
+Band MNDWI1 importance: 0.067060658675
+Band MNDWI2 importance: 0.0820119595091
+Band NDBI importance: 0.0806579517739
+Band MNDBI importance: 0.0743601668377
+400 trees
+Band 1 importance: 0.091945215749
+Band 2 importance: 0.0911051435601
+Band 3 importance: 0.0835951588822
+Band 4 importance: 0.0925620476749
+Band 5 importance: 0.0872900130573
+Band 7 importance: 0.079851833318
+Band NDVI importance: 0.107563636454
+Band NDWI importance: 0.0613527609919
+Band MNDWI1 importance: 0.0667357321342
+Band MNDWI2 importance: 0.0814764031503
+Band NDBI importance: 0.0810467142787
+Band MNDBI importance: 0.0754753407496
+500 trees
+Band 1 importance: 0.0910777862705
+Band 2 importance: 0.090735974256
+Band 3 importance: 0.0832590833573
+Band 4 importance: 0.0935357224168
+Band 5 importance: 0.0884014852637
+Band 7 importance: 0.0800035735356
+Band NDVI importance: 0.107742639029
+Band NDWI importance: 0.0619476481169
+Band MNDWI1 importance: 0.0672009497495
+Band MNDWI2 importance: 0.0810533616573
+Band NDBI importance: 0.0804003002943
+Band MNDBI importance: 0.0746414760528

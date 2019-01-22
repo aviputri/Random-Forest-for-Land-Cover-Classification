@@ -151,10 +151,31 @@ def train_rf(trees, maxfeatures, train_array, gt_array, model_sav, img,
 	#save model
 	#joblib.dump(rf, model_sav)
 
+	"""
+	bands = [1, 2, 3, 4, 5, 7, "NDVI", "NDWI", "MNDWI1", "MNDWI2", "NDBI", "MNDBI"]
+
+	for b, imp in zip(bands, rf.feature_importances_):
+    	print('Band {b} importance: {imp}'.format(b=b, imp=imp))
+    """
+
 	result_array = rf.predict(img)
 	np.save(result_array_file, result_array)
 
 	return(result_array)
+
+#this is only to see the feature importance!!
+def vim(trees, maxfeatures, train_array, gt_array):
+
+	rf = RandomForestClassifier(n_estimators = trees, min_samples_split = 10, 
+		max_features = maxfeatures, oob_score=False)
+	rf = rf.fit(train_array, gt_array)
+	#save model
+	#joblib.dump(rf, model_sav)
+
+	bands = [1, 2, 3, 4, 5, 7, "NDVI", "NDWI", "MNDWI1", "MNDWI2", "NDBI", "MNDBI"]
+
+	for b, imp in zip(bands, rf.feature_importances_):
+		print('Band {b} importance: {imp}'.format(b=b, imp=imp))
 
 
 #make raster file from the result
