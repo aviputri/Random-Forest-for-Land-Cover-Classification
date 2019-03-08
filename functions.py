@@ -10,6 +10,11 @@ import rasterio
 from rasterio.transform import from_origin
 
 # Tell GDAL to throw Python exceptions, and register all drivers
+"""
+By default the GDAL/OGR Python bindings do not raise exceptions when errors occur. 
+Instead they return an error value such as None and write an error message to sys.stdout. 
+You can enable exceptions by calling the UseExceptions() function
+"""
 gdal.UseExceptions()
 gdal.AllRegister()
 
@@ -21,7 +26,12 @@ imp.reload(main)
 
 #read the class of each data sample
 def read_class(tabular_data, gt_array_file):
+	
+	#tabular_data = 'the path of the DBF file', 
+	#gt_array_file = 'the path of the output .npy file'
+	#.npy = Numpy array file
 
+	
 	"""
 	give an $id column (I scall it FID) to all your DBF file so you can call it in order when
 	matching the feature class with the respective Reflectance (in extract_values).
@@ -51,8 +61,11 @@ def read_class(tabular_data, gt_array_file):
 	return(gt_array)
 
 #extract raster values of each sample point and save it into numpy array
-# this extract 1 band
+#this extract 1 raster band at a time
 def extract_values(shp, raster):
+	
+	#shp = 'the path of the sample shapefile'
+	#raster = 'the path of a band raster file'
 
 	"""
 	extract the FID with the Reflectance, sort it based on FID, then take only the Reflectance
@@ -70,7 +83,7 @@ def extract_values(shp, raster):
 	for feat in lyr:
 		geom = feat.GetGeometryRef()
 		feat_id = feat.GetField('FID')
-		mx,my=geom.GetX(), geom.GetY()  #coord in map units
+		mx,my=geom.GetX(), geom.GetY()  #coordinate in map units
 
 		#Convert from map to pixel coordinates
 		#Only works for geotransforms with no rotation
@@ -78,12 +91,12 @@ def extract_values(shp, raster):
 		py = int((my - gt[3]) / gt[5]) #y pixel
 
 		intval=rb.ReadAsArray(px,py,1,1)
-		li_values.append([feat_id, intval[0]])
-		#convert into numpy array
+		li_values.append([feat_id, intval[0]]) #this results in a list
+		#convert the list into numpy array
 		a = np.array(li_values).astype(np.float64)
-		#sort by FID
+		#sort the array by FID
 		a = a[a[:,0].argsort(kind='mergesort')]
-		#take out only the class id
+		#take out only the class ID (eliminate the FID)
 		b = a[:,1]
     	b = b.ravel()
 	
@@ -91,8 +104,11 @@ def extract_values(shp, raster):
 
 	return(band_array)
 
-#combine the bands
+#stack the bands
 def combine_bands(b1, b2, b3, b4, b5, b7, ndvi, multiband_array_file):
+	# b1, b2, b3, b4, b5, b7 = band 1 to 7 in the form of Numpy array
+	# ndvi = ndvi in the form of Numpy array
+	# multiband_array_file = 'the path of a band raster file'
 
 	b1 = b1.ravel()
 	b2 = b2.ravel()
@@ -108,9 +124,13 @@ def combine_bands(b1, b2, b3, b4, b5, b7, ndvi, multiband_array_file):
 
 	return(multiband_array)
 
-#combine the bands with SF
+#stack the bands with SF
+#SF = spectral features; NDVI, NDWI, MNDWI1, MNDWI2, NDBI, MNDBI
 def combine_bands_sf(b1, b2, b3, b4, b5, b7, ndvi, ndwi, mndwi1, mndwi2, ndbi, mndbi, 
 	multiband_array_file):
+	# b1, b2, b3, b4, b5, b7 = band 1 to 7 in the form of Numpy array
+	# ndvi, ndwi, mndwi1, mndwi2, ndbi, mndbi = ndvi, ndwi, mndwi1, mndwi2, ndbi, mndbi in the form of Numpy array
+	# multiband_array_file = 'the path of a band raster file'
 
 	b1 = b1.ravel()
 	b2 = b2.ravel()
@@ -133,6 +153,7 @@ def combine_bands_sf(b1, b2, b3, b4, b5, b7, ndvi, ndwi, mndwi1, mndwi2, ndbi, m
 
 #import the image band to be predicted (one by one)
 def create_band(band):
+	# band = 'the path of the band raster file'
 
 	band_ds = gdal.Open(band, gdal.GA_ReadOnly)
 	band_array = band_ds.GetRasterBand(1).ReadAsArray().astype(np.float64)
@@ -144,33 +165,42 @@ def create_band(band):
 #train the random forest and predict images
 def train_rf(trees, maxfeatures, train_array, gt_array, model_sav, img, 
 	result_array_file):
+	#trees = the number of Random Forest trees
+	#maxfeatures = max number of features for the split (I chose None to not limit the features)
+	#train_array = the band training sample in the form of Numpy array 
+	#gt_array = the Class ID training sample in the form of Numpy array 
+	#model_sav = 'the path of the saved Random Forest model'
+	#img = the test sample in the form of Numpy array
+	#result_array_file = 'the path of the prediction result in the form of Numpy array'
 
 	rf = RandomForestClassifier(n_estimators = trees, min_samples_split = 10, 
 		max_features = maxfeatures, oob_score=False)
 	rf = rf.fit(train_array, gt_array)
-	#save model
+
+	#if you would like to save the model, uncomment the command bellow:
 	#joblib.dump(rf, model_sav)
 
-	"""
+	#calculate band importance (will be printed)
 	bands = [1, 2, 3, 4, 5, 7, "NDVI", "NDWI", "MNDWI1", "MNDWI2", "NDBI", "MNDBI"]
 
 	for b, imp in zip(bands, rf.feature_importances_):
     	print('Band {b} importance: {imp}'.format(b=b, imp=imp))
-    """
 
 	result_array = rf.predict(img)
 	np.save(result_array_file, result_array)
 
 	return(result_array)
 
-#this is only to see the feature importance!!
+#this is ONLY to see the feature importance WITHOUT model prediction
 def vim(trees, maxfeatures, train_array, gt_array):
+	#trees = the number of Random Forest trees
+	#maxfeatures = max number of features for the split (I chose None to not limit the features)
+	#train_array = the band training sample in the form of Numpy array 
+	#gt_array = the Class ID training sample in the form of Numpy array 
 
 	rf = RandomForestClassifier(n_estimators = trees, min_samples_split = 10, 
 		max_features = maxfeatures, oob_score=False)
 	rf = rf.fit(train_array, gt_array)
-	#save model
-	#joblib.dump(rf, model_sav)
 
 	bands = [1, 2, 3, 4, 5, 7, "NDVI", "NDWI", "MNDWI1", "MNDWI2", "NDBI", "MNDBI"]
 
@@ -180,6 +210,8 @@ def vim(trees, maxfeatures, train_array, gt_array):
 
 #make raster file from the result
 def rasterize(result_array, result_raster):
+	#result_array = the prediction result in the form of Numpy array
+	#result_raster = 'the path of the'
 
 	a = result_array.astype(np.uint8)
 
@@ -188,7 +220,10 @@ def rasterize(result_array, result_raster):
 	c = np.flipud(b) #flip vertically
 	#because rasterio writes from bottom to top
 
-	#transform = from_origin(110....<--dari origin, -7....<--bukan dari origin, 0.000271658, -0.000271658)
+	#the origin of Rasterio is the coordinate of the Southwest edge of the raster file
+	#this should be based on the source raster that is used
+	#transform = from_origin(longitude, latitude, X resolution, Y resolution)
+	#feel free to modify the long, lat, and resolutions
 	transform = from_origin(110.0363020639564269, -7.8701315292535803, 0.000271658, -0.000271658)
 
 	new_dataset = rasterio.open(result_raster, 'w', driver='GTiff',
@@ -204,6 +239,10 @@ def rasterize(result_array, result_raster):
 	#output: test_array
 
 def test_accuracy(year, trees, test_array, gt_test_array):
+	#year = the classification year
+	#trees = the number of Random Forest trees
+	#test_array = the prediction result in the form of Numpy array
+	#rgt_test_array = the Class ID test sample in the form of Numpy array
 
 	a = accuracy_score(gt_test_array, test_array)
 	b = confusion_matrix(gt_test_array, test_array, labels=[1,2,3,4,5,6,7,8])
